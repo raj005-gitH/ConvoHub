@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatsapp Mini</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h2>All Chats!</h2>
+
+    <form method="GET" action="/chats/new">
+    <button class="newChat">New Chat</button>
+    <br> <br>
+
+    </form>
+
+    <% for(let chat of chats) { %>
+        <div class="chat">
+            <p>From: <i><%= chat.from %></i> </p>
+            <div class="msg">                
+                <p><%= chat.msg %> </p>
+                <br>
+                <div class="actions">
+                    <form method="GET" action="/chats/<%=chat.id%>/edit">
+                    <button>edit</button>                    
+                </form>
+                
+                <form method="POST" action="/chats/<%=chat.id%>?_method=DELETE">
+                    <button>delete</button>
+                </form>
+                </div>
+                
+            </div>
+            <p>Received by: <i><%= chat.to %></i> </p>
+            <hr> 
+            <p><i> <%= chat.created_at.toString().split(" ")[4] %></i></p>
+            <p><i><%= chat.created_at.toString().split(" ").slice(0,4).join(" ") %></i></p>
+
+            <% if(chat.updated_at) { %>
+                <p style="color: #2d6a4f;">Updated at: <%= chat.updated_at.toString().split(" ")[4] %> </p>
+                <% } %>
+        </div> 
+        <br><br>
+    <% } %>    
+</body>
+</html>

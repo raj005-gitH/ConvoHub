@@ -1,0 +1,129 @@
+/* public/style.css - Greenish Theme */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #e6f2e6; /* light greenish background */
+    color: #1b3a1b;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Header / Titles */
+h1, h3, h2 {
+    color: #2d6a4f;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+/* Edit & Delete Buttons */
+/* Edit & Delete Buttons - Compact with Border */
+form button {
+    background-color: #e6f2e6;       /* light greenish background */
+    color: #1b3a1b;                  /* dark green text */
+    border: 1px solid #40916c;       /* visible green border */
+    border-radius: 6px;
+    padding: 4px 10px;               /* smaller padding for compact look */
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 0.9rem;
+    margin: 2px 3px 2px 0;           /* small margin between buttons */
+}
+
+form button:hover {
+    background-color: #40916c;       /* solid green on hover */
+    color: white;
+    border: 1px solid #2d6a4f;      /* slightly darker border */
+}
+
+
+/* button,
+input[type="submit"] {
+    background-color: #40916c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #2d6a4f;
+} */
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #1b4332;
+}
+
+a:hover {
+    color: #2d6a4f;
+}
+
+/* Forms */
+form {
+/*    background-color: #f0fff4; */
+    /* padding: 20px; */
+    border-radius: 12px;
+    /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
+    /* margin-bottom: 20px; */
+}
+
+.actions {
+    display: flex;
+    gap: 6px;  /* space between buttons */
+}
+
+.actions form {
+    margin: 0;
+}
+
+/* Inputs & Textarea */
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #95d5b2;
+    border-radius: 6px;
+}
+
+/* Chat Cards */
+.chat {
+    background-color: #d8f3dc;
+    border: 1px solid #95d5b2;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.msg {
+    background-color: #40916c;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 12px;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+/* New Chat Button */
+.newChat {
+    background-color: #52b788;
+    color: white;
+}
+
+/* Misc small text */
+small {
+    color: #2d6a4f;
+    font-size: 0.85rem;
+}
